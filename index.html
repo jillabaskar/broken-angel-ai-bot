@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Ludo Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="ui-overlay">
+            <div id="game-header">
+                <h1>3D Ludo Game</h1>
+                <div id="game-status">Click "Roll Dice" to start!</div>
+            </div>
+            
+            <div id="player-info">
+                <div class="player-card" id="player-0">
+                    <div class="player-color red"></div>
+                    <div class="player-details">
+                        <span class="player-name">Red Player</span>
+                        <span class="pieces-home">4 pieces in home</span>
+                    </div>
+                </div>
+                <div class="player-card" id="player-1">
+                    <div class="player-color blue"></div>
+                    <div class="player-details">
+                        <span class="player-name">Blue Player</span>
+                        <span class="pieces-home">4 pieces in home</span>
+                    </div>
+                </div>
+                <div class="player-card" id="player-2">
+                    <div class="player-color green"></div>
+                    <div class="player-details">
+                        <span class="player-name">Green Player</span>
+                        <span class="pieces-home">4 pieces in home</span>
+                    </div>
+                </div>
+                <div class="player-card" id="player-3">
+                    <div class="player-color yellow"></div>
+                    <div class="player-details">
+                        <span class="player-name">Yellow Player</span>
+                        <span class="pieces-home">4 pieces in home</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="controls">
+                <button id="roll-dice-btn" class="game-btn">Roll Dice</button>
+                <div id="dice-result">-</div>
+                <button id="reset-game-btn" class="game-btn secondary">New Game</button>
+            </div>
+
+            <div id="instructions">
+                <h3>How to Play:</h3>
+                <ul>
+                    <li>Roll a 6 to bring a piece out of home</li>
+                    <li>Click on a piece to move it</li>
+                    <li>Land on opponent's piece to capture it</li>
+                    <li>Get all 4 pieces to the center to win!</li>
+                    <li>Use mouse to rotate the board</li>
+                </ul>
+            </div>
+        </div>
+        
+        <canvas id="game-canvas"></canvas>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="board.js"></script>
+    <script src="pieces.js"></script>
+    <script src="dice.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
